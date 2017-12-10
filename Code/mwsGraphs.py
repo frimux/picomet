@@ -1,8 +1,8 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-# MODULE for rrd Graphs for getMwsDataXY.py
-# REQUIRED for programs getMwsData35.py and later !
+# MODULE for rrd Graphs for getPmDataXY.py
+# REQUIRED for programs getPmData35.py and later !
 
 import rrdtool
 from datetime import datetime as dtdt		# i.e.  "dtdt"  is an alias for class  "datetime.datetime"

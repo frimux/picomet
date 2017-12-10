@@ -10,7 +10,7 @@
 # NOTE: This versions ONLY works with BMP280 as inside (inbox) pressure/temperature sensor (instead of BME280)
 # NOTE: This and later versions will not be compatible anymore with earlier versions (32 and before !!!) !!!
 
-# ##### NOTE: See lines 1295 & 1296 - THIS IS TO TAKE NO READING, AS SENSOR SEEMS DAMAGED  ######################
+# ##### NOTE: See lines 1295 & 1296 - THIS IS TO TAKE NO READING, AS SENSOR MUST BE REPLACED  ######################
 
 # Importing libraries =======================================================================
 
