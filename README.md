@@ -1,2 +1,2 @@
 # picomet
-This is my private weather data logging station
+My private weather data logging station project
