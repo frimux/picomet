@@ -1,0 +1,82 @@
+PicoMet - My Weather Station
+
+This is a brief description of the solar powered weather data logging station that I have built during the recent months. It is located in our garden behind the house, which means it is surrounded by buildings and therefore not in in an optimal position. However for me the purpose of this project is not primarily to obtain high quality weather data but rather the enjoyment of building it. 
+
+The heart of the station is a Raspberry Pi 2B, which is located inside our garden shack. It receives the necessary power from a lead battery hooked to a photovoltaic panel via a charge controller. 
+
+Wind speed and direction are obtained from a Maplin cup-type anemometer and wind vane. The amount of rainfall is measured by a Maplin rain gauge of the self-emptying tipping bucket type.
+For air temperature, air pressure and humidity I use a BME280 sensor sitting on a breakout board which is located in a Stevenson screen housing mounted about 2 meters above ground. To get a second temperature reading a DS18B20 temperature sensor is employed which resides next to the BME280 also inside the Stevenson screen. 
+To measure the brightness of the sunlight I use a GA1A12S202 Log-scale Analog Light Sensor connected to the RPi through MCP3208 ADC.
+All sensors are connected with the Raspberry Pi GPIO pins through two connector boards. All the pin headers to accomodate the plugs of the cables coming from the sensors and one MCP3208 ADC sit on the upper connector board. The lower connector 
+The two boards sit on top of each other connected with a few male and female pin headers. The whole assembly connects to the Raspberry Pi using an Adafruit Pi cobbler on the upper board.
+
+A Raspberry Pi camera powered by a RPi Zero located in a dummy camera housing mounted to the outside of the garden shack periodically provides a picture oft he local sky
+
+The software for data acquisition and display thereof is a Python program naturally making use of modules provided by the the Raspbian OS and various open source modules. The graphs displaying the course of the data values with time are implemented using the Python package of Toby Oetiker’s RRDtool.
+
+The data are periodically acquired to update the RRD databases and to be written into a json file. This way the most recent values can always be displayed in a webbrowser using a lighttpd webserver and a HTML file which periodically reloads itself. 
+
+Right now both Raspberry Pis are connected to my private internal network. The HTML file can be accessed from outside, but as long as I don’t have a proper website for it I will not make it public.
+
+
+Some remarks on the software:
+
+- My programming experience is quite limited. I did my first programs in the 80s with FORTRAN IV and BASIC. After that my professional career moved more in a managerial direction. Now that I’m retired I have acquired some basic knowledge in Python, HTML, Javascript and JSON. Thus, I guess, there may be some fundamental shortcomings in my software. So far it’s been working satisfactorily. But any suggestions for improvements are more than welcome!
+
+- Presently there are many print statements implemented in the program. They are merely used for testing purposes and have no functional purpose.
+- The software has grown over the months. A major revision might be necessary.
+
+
+
+See pictures in pictures folder:
+
+1 Site overview
+2 Anemometer, windvane and rain gauge
+3 Sky camera and light sensor
+4 Charge controller, lead battery and Raspberry Pi
+5 Charge controller and Raspberry Pi
+6 Monocrystalline photovoltaic cell
+7 Raspberry Pi and connector boards
+8 Upper connector board
+9 Lower connector board
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		10.12.2017
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	1 of 2
+
+
